@@ -16,8 +16,8 @@ except Exception:
 import json
 
 # Token do bot corrigido. Alcançado pelo portal de desenvolvedores do Discord.
-# Aqui : https://discord.com/developers/applications/1437866885067702292/information
-TOKEN = "MTQzNzg2Njg4NTA2NzcwMjI5Mg.Gzc_Nb.bdiHUumLD-yNiAnVkFCtJBtg7OfoWyh0wdrlME"
+with open('config.json', 'r') as f:
+    TOKEN = json.load(f)["token"]
 
 intents = discord.Intents.default()
 # Pra conseguir ler a mensagem.
@@ -29,7 +29,7 @@ intents.members = True
 cliente = discord.Client(intents = intents)
 
 @cliente.event
-async def on_ready():
+async def oneady():
     print(f'Loggado como:  {cliente.user}')
     for guild in cliente.guilds:
         print(f'Processando servidor: {guild.name} (id: {guild.id}) ')
