@@ -15,7 +15,9 @@ except Exception:
 
 import json
 
-TOKEN = "35a0034ac9550afe60ec47118651d3cd6865b741ca566dacd69815ab7761f39c"
+# Token do bot corrigido. Alcançado pelo portal de desenvolvedores do Discord.
+# Aqui : https://discord.com/developers/applications/1437866885067702292/information
+TOKEN = "MTQzNzg2Njg4NTA2NzcwMjI5Mg.Gzc_Nb.bdiHUumLD-yNiAnVkFCtJBtg7OfoWyh0wdrlME"
 
 intents = discord.Intents.default()
 # Pra conseguir ler a mensagem.
@@ -27,7 +29,7 @@ intents.members = True
 cliente = discord.Client(intents = intents)
 
 @cliente.event
-async def onReady():
+async def on_ready():
     print(f'Loggado como:  {cliente.user}')
     for guild in cliente.guilds:
         print(f'Processando servidor: {guild.name} (id: {guild.id}) ')
@@ -46,7 +48,7 @@ async def onReady():
             }
             try :
                 # Passa por cada mensagem no canal.
-                async for mensagem in canal.history(limit=none):
+                async for mensagem in canal.history(limit=None):
 
                     dadosMensagem = {
                         "id" : mensagem.id,
