@@ -58,7 +58,7 @@ def geraWordCloud(caminhoJson, caminhoSaida="wordcloud.png"):
         height=800,
         background_color="black",
         colormap="rainbow",
-        max_words=1000
+        max_words=10000
     ).generate_from_frequencies(freq)
 
     # Exibe e salva
