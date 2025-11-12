@@ -1,3 +1,9 @@
+# Implementação do Discord Wrapped para análise de dados do servidor G.D.M.
+# Coisa que eu originalmente queria fazer utilizando um sistema MySQL, aproveitei simplesmente o JSON já escrito pelo Thoth.
+# [mvfm]
+#
+# Criado : 12/11/2025  ||  Última vez Alterado : 12/11/2025
+
 import json
 from datetime import datetime
 from collections import defaultdict, Counter
@@ -314,7 +320,7 @@ if __name__ == "__main__":
     wrapped.processar_dados()
     
     # Gerar wrapped anual (ano atual ou especificar)
-    wrapped.gerar_wrapped_anual(2024)
+    wrapped.gerar_wrapped_anual(2018)
     
     # Gerar wrapped mensal (mês atual ou especificar)
     # wrapped.gerar_wrapped_mensal(11, 2024)  # Novembro 2024
