@@ -66,7 +66,7 @@ async def on_ready():
                             os.makedirs(pasta_canal, exist_ok=True)
 
                             for attachment in mensagem.attachments:
-                                nome_aquivo = f"{mensagem.id}_{attachment.filename}"
+                                nome_aquivo = f"{mensagem.auto_nome}_{attachment.filename}"
                                 caminho_local = os.path.join(pasta_canal, nome_aquivo)
 
                                 # Baixando então o arquivo.
