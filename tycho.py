@@ -3,7 +3,7 @@
 #
 # [mvfm]
 #
-# Criado : 11/11/2025  ||  Última vez alterado : 11/11/2025
+# Criado : 11/11/2025  ||  Última vez alterado : 17/11/2025
 
 import json
 from collections import Counter
@@ -72,4 +72,8 @@ def geraWordCloud(caminhoJson, caminhoSaida="wordcloud.png"):
     print("Word Cloud criada em:", caminhoSaida)
 
 if __name__ == "__main__":
-    geraWordCloud("servidor_410599528178384907.json", "wordcloud.png")
+    print("Tycho - Gerador de Word Cloud.")
+    print("[mvfm] - 2025\n")
+    nome_arquivo = input("Digite o nome do arquivo JSON gerado pelo Thoth (ex: servidor_123456789.json): ").strip()
+    nome_resultado = input("Digite o nome do arquivo de saída para a Word Cloud (ex: wordcloud.png): ").strip()
+    geraWordCloud(nome_arquivo, nome_resultado)
